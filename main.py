@@ -122,7 +122,7 @@ if __name__ == '__main__':
         'workers': 3,  # Adjust worker count as needed
      }
     #socketio.run(app, allow_unsafe_werkzeug=True)
-    print('Servidor Websocket Python 1.3 - rodando...')
+    print('Servidor Websocket Python 1.4 - rodando...')
     print('==Socket.io==')
     print('==COMPLETAO==')
     print('minha_porta:'+str(minha_porta))
