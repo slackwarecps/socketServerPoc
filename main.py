@@ -62,9 +62,9 @@ if __name__ == '__main__':
     gunicorn_options = {
         'workers': 3,  # Adjust worker count as needed
      }
-    print('Servidor Websocket Python 1.0 - rodando...')
+    print('Servidor Websocket Python 1.2 - rodando...')
     print('==Socket.io==')
     print('port:'+os.environ.get('PORT'))
 
-    socketio.run(app, **gunicorn_options)
+    socketio.run(app,allow_unsafe_werkzeug=True, **gunicorn_options)
 
