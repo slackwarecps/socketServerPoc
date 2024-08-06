@@ -65,14 +65,6 @@ if __name__ == '__main__':
     print('Servidor Websocket Python 1.0 - rodando...')
     print('==Socket.io==')
     print('port:5011')
-    
-    # BITCOIN Start the message sending thread
-    # thread = threading.Thread(target=send_message)
-    # thread.daemon = True
-    # thread.start()
-    
-    # Run the Flask app
-    #socketio.run(app, host='0.0.0.0', port=5011)
-   # socketio.run(app, host='0.0.0.0', port=5011, debug=True)
-    #socketio.run(app, debug=True)
+
     socketio.run(app, **gunicorn_options)
+
