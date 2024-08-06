@@ -66,5 +66,7 @@ if __name__ == '__main__':
     print('==Socket.io==')
     print('port:'+os.environ.get('PORT'))
 
-    socketio.run(app,allow_unsafe_werkzeug=True, **gunicorn_options)
+    #socketio.run(app,allow_unsafe_werkzeug=True, **gunicorn_options)
+    socketio.run(app)
+
 
