@@ -70,4 +70,4 @@ if __name__ == '__main__':
     # Run the Flask app
     #socketio.run(app, host='0.0.0.0', port=5011)
    # socketio.run(app, host='0.0.0.0', port=5011, debug=True)
-    socketio.run(app, debug=True)
+    socketio.run(app, debug=True,allow_unsafe_werkzeug=True)
