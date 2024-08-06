@@ -64,7 +64,7 @@ if __name__ == '__main__':
      }
     print('Servidor Websocket Python 1.0 - rodando...')
     print('==Socket.io==')
-    print('port:5011')
+    print('port:'+os.environ.get('PORT'))
 
     socketio.run(app, **gunicorn_options)
 
