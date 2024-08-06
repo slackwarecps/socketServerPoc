@@ -117,7 +117,7 @@ def test_disconnect():
 
 
 if __name__ == '__main__':
-    minha_porta = int(os.environ.get('PORT', 8080))  # Get port from environment variable
+    minha_porta = int(os.environ.get('PORT', 5000))  # Get port from environment variable
     gunicorn_options = {
         'workers': 3,  # Adjust worker count as needed
      }
@@ -130,4 +130,4 @@ if __name__ == '__main__':
 
     #socketio.run(app,allow_unsafe_werkzeug=True, **gunicorn_options)
     #socketio.run(app,host='0.0.0.0',port=minha_porta)
-    socketio.run(app,port=minha_porta)
+    socketio.run(app)
