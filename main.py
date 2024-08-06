@@ -125,7 +125,9 @@ if __name__ == '__main__':
     print('Servidor Websocket Python 1.3 - rodando...')
     print('==Socket.io==')
     print('==COMPLETAO==')
-    print('minha_porta:'+minha_porta)
+    print('minha_porta:'+str(minha_porta))
+    
 
     #socketio.run(app,allow_unsafe_werkzeug=True, **gunicorn_options)
+    #socketio.run(app,host='0.0.0.0',port=minha_porta)
     socketio.run(app,port=minha_porta)
