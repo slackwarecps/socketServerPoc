@@ -3,7 +3,7 @@ from flask_socketio import SocketIO, emit
 import json
 import time
 import threading
-import requests
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
@@ -58,6 +58,10 @@ def handle_message(data):
 #socketio.on_namespace(MyNamespace('/'))
 
 if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))  # Get port from environment variable
+    gunicorn_options = {
+        'workers': 3,  # Adjust worker count as needed
+     }
     print('Servidor Websocket Python 1.0 - rodando...')
     print('==Socket.io==')
     print('port:5011')
@@ -70,4 +74,5 @@ if __name__ == '__main__':
     # Run the Flask app
     #socketio.run(app, host='0.0.0.0', port=5011)
    # socketio.run(app, host='0.0.0.0', port=5011, debug=True)
-    socketio.run(app, debug=True)
+    #socketio.run(app, debug=True)
+    socketio.run(app, **gunicorn_options)
