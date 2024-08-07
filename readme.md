@@ -1,5 +1,12 @@
 # Servidor socket python
 
+# gerando a imagem
+./build_and_push.sh
+
+# rodando o projeto
+$ python -m flask run --host=0.0.0.0 --port=80
+
+
 Crie um servidor Python Flask com flask_socketio e sirva um websocket com um topico "/topic/greetings"
 
 com o endpoint "/gs-guide-websocket". 

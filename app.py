@@ -31,6 +31,9 @@ def background_thread():
 def index():
     return render_template('index.html', async_mode=socketio.async_mode)
 
+@app.route('/sessions')
+def sessions_page():
+    return render_template('sessions.html', async_mode=socketio.async_mode)
 
 @socketio.event
 def my_event(message):
