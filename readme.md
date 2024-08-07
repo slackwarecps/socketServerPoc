@@ -27,7 +27,8 @@ no endpoint "/gs-guide-websocket" que esta rodando em localhost na porta 5011 e 
 ````
 {"e":"trade","E":1722766102790,"s":"BTCUSDT","t":3718209179,"p":"60610.00000000","q":"0.00154000","T":1722766102789,"m":true,"M":true}
 ````
-
+# SUBIR CONTAINER LOCAL
+docker run --name fabao-socket-server -p 80:80 fabioalvaro/socketserver:latest
 
 # P3 
 Como configurar o postman para ouvir os eventos de um topico "/topic/greetings" no servidor websocket que esta rodando em localhost na porta 5011
