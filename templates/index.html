@@ -23,7 +23,7 @@
             // to the client. The data is then displayed in the "Received"
             // section of the page.
             socket.on('my_response', function(msg, cb) {
-                $('#log').append('<br>' + $('<div/>').text('Received #' + msg.count + ': ' + msg.data).html());
+                $('#log').append('<br>' + $('<div/>').text('Recebido #' + msg.count + ': ' + msg.data).html());
                 if (cb)
                     cb();
             });
@@ -87,11 +87,11 @@
     </script>
 </head>
 <body>
-    <h1>Flask-SocketIO Test</h1>
+    <h1>Python Flask-SocketIO Server - Fabão 1.0</h1>
     <p>
-      Async mode is: <b>{{ async_mode }}</b><br>
-      Current transport is: <b><span id="transport"></span></b><br>
-      Average ping/pong latency: <b><span id="ping-pong"></span>ms</b>
+      Modo Assincrono esta: <b>{{ async_mode }}</b><br>
+      Atual transport esta: <b><span id="transport"></span></b><br>
+      Média ping/pong latencia: <b><span id="ping-pong"></span>ms</b>
     </p>
     <h2>Send:</h2>
     <form id="emit" method="POST" action='#'>
@@ -122,7 +122,7 @@
     <form id="disconnect" method="POST" action="#">
         <input type="submit" value="Disconnect">
     </form>
-    <h2>Receive:</h2>
+    <h2>Recebido:</h2>
     <div id="log"></div>
 </body>
 </html>
