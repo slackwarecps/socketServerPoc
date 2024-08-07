@@ -117,7 +117,7 @@ def test_disconnect():
 
 
 if __name__ == '__main__':
-    minha_porta = int(os.environ.get('PORT', 5000))  # Get port from environment variable
+    minha_porta = int(os.environ.get('PORT', 80))  # Get port from environment variable
     gunicorn_options = {
         'workers': 3,  # Adjust worker count as needed
      }
