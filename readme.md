@@ -9,8 +9,11 @@ docker run --name fabao-socket-server -p 80:80 fabioalvaro/socketserver:latest
 
 ## Variaveis de Ambiente
 ```
+
+export MONGO_DB_URI='mongodb+srv://A_URI_VAI_AQUI/?tls=true&tlsAllowInvalidCertificates=true'
 export MONGO_DB_DATABASE=SUA_BASE_DE_DADOS
-export MONGO_DB_URI=mongodb+srv://A_URI_VAI_AQUI/?tls=true&tlsAllowInvalidCertificates=true
+echo $MONGO_DB_DATABASE
+echo $MONGO_DB_URI
 ```
 
 
