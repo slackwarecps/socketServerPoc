@@ -1,10 +1,30 @@
-# Servidor socket python
+# Servidor socket python 1.0.2
 
-# gerando a imagem
+https://hub.docker.com/r/fabioalvaro/socketserver
+
+```
+docker run --name fabao-socket-server -p 80:80 fabioalvaro/socketserver:latest
+
+```
+
+## Variaveis de Ambiente
+```
+export MONGO_DB_DATABASE=SUA_BASE_DE_DADOS
+export MONGO_DB_URI=mongodb+srv://A_URI_VAI_AQUI/?tls=true&tlsAllowInvalidCertificates=true
+```
+
+
+## RODANDO COM AS VARIAVEIS
+```
+$ docker run --name fabao-socket-server -p 80:80 -e MONGO_DB_DATABASE=$MONGO_DB_DATABASE -e MONGO_DB_URI=$MONGO_DB_URI fabioalvaro/socketserver:latest
+```
+
+
+## gerando a imagem
 ./build_and_push.sh
 
-# rodando o projeto
-$ python -m flask run --host=0.0.0.0 --port=80
+## rodando o projeto
+$ python app.py
 
 
 Crie um servidor Python Flask com flask_socketio e sirva um websocket com um topico "/topic/greetings"
@@ -34,10 +54,10 @@ no endpoint "/gs-guide-websocket" que esta rodando em localhost na porta 5011 e 
 ````
 {"e":"trade","E":1722766102790,"s":"BTCUSDT","t":3718209179,"p":"60610.00000000","q":"0.00154000","T":1722766102789,"m":true,"M":true}
 ````
-# SUBIR CONTAINER LOCAL
+##  SUBIR CONTAINER LOCAL
 docker run --name fabao-socket-server -p 80:80 fabioalvaro/socketserver:latest
 
-# P3 
+##  P3 
 Como configurar o postman para ouvir os eventos de um topico "/topic/greetings" no servidor websocket que esta rodando em localhost na porta 5011
 
 # instale  os pacotes
@@ -46,10 +66,12 @@ $ poc/bin/activate
 $ pip install --upgrade pip
 $ pip install websockets flask flask_socketio requests pip install gevent gevent-websocket
 
-# OUVIR OS EVENTOS
+## OUVIR OS EVENTOS
+```
 $ npm install -g wscat
 $ wscat -c ws://localhost:5011/gs-guide-websocket
 $ wscat -c http://192.168.1.104:5011/gs-guide-websocket
 $ websocat ws://localhost:5011/gs-guide-websocket
 $ websocat http://192.168.1.104:5011/gs-guide-websocket
 $ websocat ws://127.0.0.1:5011/gs-guide-websocket
+````
