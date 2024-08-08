@@ -90,7 +90,7 @@ def my_broadcast_event(message):
          {'data': message['data'], 'count': session['receive_count']},
          broadcast=True)
 
-
+# Sala ENTRANDO...
 @socketio.event
 def join(message):
     join_room(message['room'])
@@ -100,7 +100,7 @@ def join(message):
          {'data': 'In rooms: ' + ', '.join(rooms()),
           'count': session['receive_count']})
 
-
+# Sala SAINDO...
 @socketio.event
 def leave(message):
     leave_room(message['room'])

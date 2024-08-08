@@ -16,6 +16,28 @@ echo $MONGO_DB_DATABASE
 echo $MONGO_DB_URI
 ```
 
+## LAUNCH.json
+```
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "SocketServer",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/app.py",
+            "console": "integratedTerminal",
+            "env": {
+                "MONGO_DB_URI": "mongodb+srv://zzz:www@clusteryyy.czq1sxr.mongodb.net/?tls=true&tlsAllowInvalidCertificates=true",
+                "MONGO_DB_DATABASE": "bingo"
+            }
+        }
+    ]
+}
+```
 
 ## RODANDO COM AS VARIAVEIS
 ```

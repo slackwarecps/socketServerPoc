@@ -3,7 +3,7 @@
 
 # Nome da imagem e tags
 IMAGE_NAME="fabioalvaro/socketserver"
-IMAGE_TAG="v1.0.2"
+IMAGE_TAG="v1.0.3"
 LATEST_TAG="latest"
 
 # Build do projeto Maven
